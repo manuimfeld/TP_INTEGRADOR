@@ -1,42 +1,77 @@
 #include <iostream>
-#include "menu.h"
-#include "juego.h"
+#include "manu.h"
 
 using namespace std;
 
-int seleccionarOpcion()
-{
-    int opcion;
-    cout << "--- MENU PRINCIPAL --- " << endl;
-    cout << "1- Jugar" << endl;
-    cout << "2- Estadistica" << endl;
-    cout << "0- Salir" << endl;
-    cout << "----------------" << endl;
-    cout << "Opcion: ";
-    cin >> opcion;
+void menu(){
+bool juego = true;
 
-    return opcion;
-}
+    int opc;
 
-void estadisticas(int estadisticasGanador, int estadisticasRondas)
-{
-    // TODO: Agregar para que cuando sea cero muestre un menjase de que aun no se realizaron jugadas
-    cout << "El jugador #" << estadisticasGanador << " gano en " << estadisticasRondas << " rondas" << endl;
-}
+    do{
+        system("cls");
+        cout<<"|-----------------MENU PRINCIPAL----------------|"<<endl;
+        cout<<"|                                               |"<<endl;
+        cout<<"|-1) PRESIONE 1 PARA MODO UN JUGADOR------------|"<<endl;
+        cout<<"|                                               |"<<endl;
+        cout<<"|-2) PRESIONE 2 PARA MODO DOS JUGADORES---------|"<<endl;
+        cout<<"|                                               |"<<endl;
+        cout<<"|-3) PRESIONE 3 PARA ESTADISTICAS---------------|"<<endl;
+        cout<<"|                                               |"<<endl;
+        cout<<"|-4) PRESIONE 4 PARA CREDITOS-------------------|"<<endl;
+        cout<<"|                                               |"<<endl;
+        cout<<"|-0) PRESIONE 0 PARA SALIR----------------------|"<<endl;
+        cout<<"|                                               |"<<endl;
+        cout<<"|---------------INGRESE UNA OPCION--------------|"<<endl;
+        cout<<"|_______________________________________________|"<<endl;
+        cin>>opc;
 
-void ejecutarOpcion(int opcion, int &estadisticasGanador, int &estadisticasRondas)
-{
-    switch (opcion)
-    {
-    case 1:
-        jugar(estadisticasGanador, estadisticasRondas);
-        break;
-    case 2:
-        estadisticas(estadisticasGanador, estadisticasRondas);
-        break;
-    case 0:
-        cout << "Gracias por utilizar mi juego!" << endl;
-        cout << "Los ganadores no usan drogas!!" << endl;
-        break;
+
+        switch(opc){
+            case 0:
+                ///PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
+                system("cls");
+                cout<<"Saliendo del juego..."<<endl;
+                system("pause");
+               juego = false ;
+                break;
+            case 1:
+                ///PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
+                system("cls");
+                cout<<"Modo un jugador"<<endl;
+                system("pause");
+                break;
+
+            case 2:
+                ///PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
+                system("cls");
+                cout<<"Modo dos jugadores"<<endl;
+                system("pause");
+                break;
+
+            case 3:
+                ///PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
+                system("cls");
+               cout <<"Estadisticas"<<endl;
+                system("pause");
+                break;
+
+            case 4:
+                ///PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
+                system("cls");
+                cout << "Créditos"<<endl;
+                system("pause");
+                break;
+
+            default:
+               /// PlaySound(TEXT("WRONG.wav"),NULL,SND_SYNC);
+                system("cls");
+                cout<< "Opción incorrecta!!" << endl;
+                system("pause");
+                break;
+        }
+
     }
+
+     while(opc!=0);
 }

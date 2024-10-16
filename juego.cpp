@@ -29,7 +29,7 @@ void mostrarDados(int vDados[], int cantidad)
 int calcularPuntaje(int vDados[], int cantidad, int bloqueador1, int bloqueador2)
 {
     int puntos = 0;
-    bool sonIguales = true;
+
 
     for (int i = 0; i < cantidad; i++)
     {
@@ -39,10 +39,6 @@ int calcularPuntaje(int vDados[], int cantidad, int bloqueador1, int bloqueador2
         }
     }
 
-        if (sonIguales)
-        {
-            return 0; // Todos los dados son iguales, así que no se suman los puntos
-        }
 
     return puntos;
 }
@@ -85,5 +81,6 @@ void jugar(int &estadisticasGanador, int &estadisticasRondas)
         cout << "Jugador #2 - Bloqueador 1: " << bloqueador1Jugador2 << " | Bloqueador 2: " << bloqueador2Jugador2 << endl;
         puntajeTotal2 += ejecutarRonda(2, bloqueador1Jugador2, bloqueador2Jugador2);
         cout << "Puntaje total jugador #2: " << puntajeTotal2 << endl;
-
-
+    }
+    while(puntajeTotal1 < 25 && puntajeTotal2 < 25);
+}

@@ -1,4 +1,7 @@
 #pragma once
 
-int seleccionarOpcion();
-void ejecutarOpcion(int opcion, int &estadisticasGanador, int &estadisticasRondas);
+using namespace std;
+
+void menu(int &estadisticasGanador, int &estadisticasRondas);
+
+

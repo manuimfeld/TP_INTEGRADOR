@@ -33,20 +33,16 @@ int calcularPuntaje(int vDados[], int cantidad, int bloqueador1, int bloqueador2
 
     for (int i = 0; i < cantidad; i++)
     {
-        if (vDados[i] != vDados[0])
-        {
-            sonIguales = false; // Si todos los dados no son iguales, se suman los puntos
-        }
         if (vDados[i] != bloqueador1 && vDados[i] != bloqueador2)
         {
             puntos += vDados[i]; // Suma los puntos de los dados que no sean igual a los bloqueadores
         }
     }
 
-    if (sonIguales)
-    {
-        return 0; // Todos los dados son iguales, así que no se suman los puntos
-    }
+        if (sonIguales)
+        {
+            return 0; // Todos los dados son iguales, así que no se suman los puntos
+        }
 
     return puntos;
 }
@@ -90,25 +86,4 @@ void jugar(int &estadisticasGanador, int &estadisticasRondas)
         puntajeTotal2 += ejecutarRonda(2, bloqueador1Jugador2, bloqueador2Jugador2);
         cout << "Puntaje total jugador #2: " << puntajeTotal2 << endl;
 
-    } while (puntajeTotal1 < 25 && puntajeTotal2 < 25);
 
-    if (puntajeTotal1 >= puntajeTotal2)
-    {
-        cout << "El ganador fue el jugador #1" << endl;
-        estadisticasGanador = 1;
-    }
-
-    if (puntajeTotal2 >= puntajeTotal1)
-    {
-        cout << "El ganador fue el jugador #2" << endl;
-        estadisticasGanador = 2;
-    }
-
-    estadisticasRondas = cantidadRondas;
-
-    cout << "En la ronda #" << cantidadRondas << endl;
-
-    // TODO: Hacer que solo guarde si es menor al de estadisticasRondas
-
-    cout << endl;
-}

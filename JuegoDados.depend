@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1728521287 source:e:\github\educacion\utn\2024\2c\programacion1-20242c-n\semana  10\miercoles\juegodados\menu.cpp
+	<iostream>
+	"menu.h"
+	"juego.h"
+
+1728521300 e:\github\educacion\utn\2024\2c\programacion1-20242c-n\semana  10\miercoles\juegodados\menu.h
+
+1728521307 source:e:\github\educacion\utn\2024\2c\programacion1-20242c-n\semana  10\miercoles\juegodados\main.cpp
+	<iostream>
+	<ctime>
+	"menu.h"
+
+1728521287 e:\github\educacion\utn\2024\2c\programacion1-20242c-n\semana  10\miercoles\juegodados\juego.h
+
+1728521287 source:e:\github\educacion\utn\2024\2c\programacion1-20242c-n\semana  10\miercoles\juegodados\juego.cpp
+	<iostream>
+	"juego.h"
+
+1729103098 source:c:\users\manu_\desktop\facuc++\tp_integrador\juego.cpp
+	<iostream>
+	"juego.h"
+
+1729102311 c:\users\manu_\desktop\facuc++\tp_integrador\juego.h
+
+1729102925 source:c:\users\manu_\desktop\facuc++\tp_integrador\main.cpp
+	<iostream>
+	<ctime>
+	"menu.h"
+
+1729102923 c:\users\manu_\desktop\facuc++\tp_integrador\menu.h
+
+1729102750 source:c:\users\manu_\desktop\facuc++\tp_integrador\menu.cpp
+	<iostream>
+	"menu.h"
+	"juego.h"
+

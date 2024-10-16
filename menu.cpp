@@ -1,10 +1,13 @@
 #include <iostream>
-#include "manu.h"
+#include "menu.h"
+#include "juego.h"
+
 
 using namespace std;
 
-void menu(){
-bool juego = true;
+void menu(int &estadisticasGanador, int &estadisticasRondas)
+{
+    bool juego = true;
 
     int opc;
 
@@ -33,12 +36,13 @@ bool juego = true;
                 system("cls");
                 cout<<"Saliendo del juego..."<<endl;
                 system("pause");
-               juego = false ;
+                juego = false ;
                 break;
             case 1:
                 ///PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
                 system("cls");
                 cout<<"Modo un jugador"<<endl;
+                jugar (estadisticasGanador, estadisticasRondas);
                 system("pause");
                 break;
 

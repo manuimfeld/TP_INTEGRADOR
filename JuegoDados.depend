@@ -35,3 +35,17 @@
 	"menu.h"
 	"juego.h"
 
+1729285363 source:c:\users\usuario\desktop\utn_c++\tp_integrador\juego.cpp
+	<iostream>
+	"juego.h"
+
+1729285373 c:\users\usuario\desktop\utn_c++\tp_integrador\juego.h
+
+1729284955 source:c:\users\usuario\desktop\utn_c++\tp_integrador\main.cpp
+	<iostream>
+	<ctime>
+	"menu.h"
+	"juego.h"
+
+1729291522 c:\users\usuario\desktop\utn_c++\tp_integrador\menu.h
+

@@ -5,14 +5,11 @@
 
 using namespace std;
 
-
-
 int main()
 {
-     int estadisticasGanador=0, estadisticasRondas=0;
      srand(time(0));
 
-menu(estadisticasGanador, estadisticasRondas);
+     menu();
 
-return 0;
+     return 0;
 }

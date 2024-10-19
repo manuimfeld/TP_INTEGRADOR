@@ -53,7 +53,7 @@ void menu()
             /// PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
             system("cls");
             cout << "Modo un jugador" << endl;
-            jugar();
+            jugarModoSolitario(1);
             system("pause");
             break;
 

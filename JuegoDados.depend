@@ -21,16 +21,17 @@
 	<iostream>
 	"juego.h"
 
-1729102311 c:\users\manu_\desktop\facuc++\tp_integrador\juego.h
+1729313259 c:\users\manu_\desktop\facuc++\tp_integrador\juego.h
 
-1729102925 source:c:\users\manu_\desktop\facuc++\tp_integrador\main.cpp
+1729305700 source:c:\users\manu_\desktop\facuc++\tp_integrador\main.cpp
 	<iostream>
 	<ctime>
 	"menu.h"
+	"juego.h"
 
-1729102923 c:\users\manu_\desktop\facuc++\tp_integrador\menu.h
+1729305700 c:\users\manu_\desktop\facuc++\tp_integrador\menu.h
 
-1729102750 source:c:\users\manu_\desktop\facuc++\tp_integrador\menu.cpp
+1729310637 source:c:\users\manu_\desktop\facuc++\tp_integrador\menu.cpp
 	<iostream>
 	"menu.h"
 	"juego.h"

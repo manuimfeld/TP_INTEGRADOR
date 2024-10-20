@@ -1,6 +1,7 @@
 #include <iostream>
 #include "menu.h"
 #include "juego.h"
+#include "dados.h"
 
 using namespace std;
 

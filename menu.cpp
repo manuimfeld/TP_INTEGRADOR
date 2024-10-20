@@ -19,7 +19,7 @@ void menu()
 {
     bool juego = true;
 
-    int opc;
+    int opcion;
 
     do
     {
@@ -38,9 +38,9 @@ void menu()
         cout << "|                                               |" << endl;
         cout << "|---------------INGRESE UNA OPCION--------------|" << endl;
         cout << "|_______________________________________________|" << endl;
-        cin >> opc;
+        cin >> opcion;
 
-        switch (opc)
+        switch (opcion)
         {
         case 0:
             /// PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
@@ -88,5 +88,5 @@ void menu()
 
     }
 
-    while (opc != 0);
+    while (opcion != 0);
 };

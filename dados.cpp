@@ -8,17 +8,17 @@ int tirarDado()
     return rand() % 6 + 1;
 }
 
-void tiradaDeDados(int vDados[], int cantidad)
+void tiradaDeDados(int vDados[], int dadosDisponibles)
 {
-    for (int i = 0; i < cantidad; i++)
+    for (int i = 0; i < dadosDisponibles; i++)
     {
         vDados[i] = tirarDado();
     }
 }
 
-void mostrarDados(int vDados[], int cantidad)
+void mostrarDados(int vDados[], int dadosDisponibles)
 {
-    for (int i = 0; i < cantidad; i++)
+    for (int i = 0; i < dadosDisponibles; i++)
     {
         cout << " " << vDados[i];
     }

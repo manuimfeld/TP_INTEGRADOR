@@ -2,8 +2,11 @@
 
 using namespace std;
 
-void jugarModoSolitario(int jugador);
+string nombreJugador();
+void jugarModoSolitario(string nombreJugador);
 bool nuevaTirada();
 bool nuevaRonda();
-int ejecutarTirada(int bloqueador1, int bloqueador2);
-int calcularPuntaje(int vDados[], int cantidad, int bloqueador1, int bloqueador2);
+int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2);
+int calcularPuntaje(int vDados[5], int dadosDisponibles, int bloqueador1, int bloqueador2);
+void mensaje();
+int calcularBloqueados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2);

@@ -2,19 +2,9 @@
 #include "menu.h"
 #include "juego.h"
 #include "dados.h"
+#include "creditos.h"
 
 using namespace std;
-
-void mostrarCreditos()
-{
-    cout << "Creditos: Equipo X" << endl;
-    cout << "Integrantes:" << endl;
-    cout << "Fiaschi Bernardo - Legajo X" << endl;
-    cout << "Peña Pariona Cinthia - Legajo X" << endl;
-    cout << "Serafini Nicolas - Legajo X" << endl;
-    cout << "Imfeld Jair Manuel - Legajo 30397" << endl;
-    system("pause");
-};
 
 void menu()
 {
@@ -53,8 +43,9 @@ void menu()
         case 1:
             /// PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
             system("cls");
-            cout << "Modo un jugador" << endl;
-            jugarModoSolitario(1);
+            cout << "Por favor indique su nombre." << endl;
+            // En C++ las funciones antes de ejecutar las instrucciones, primero resuelve los parametros (en este caso, el jugador tiene que escribir su nombre)
+            jugarModoSolitario(nombreJugador());
             system("pause");
             break;
 

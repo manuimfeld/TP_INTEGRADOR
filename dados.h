@@ -3,5 +3,5 @@
 using namespace std;
 
 int tirarDado();
-void tiradaDeDados(int vDados[], int cantidad);
-void mostrarDados(int vDados[], int cantidad);
+void tiradaDeDados(int vDados[], int dadosDisponibles);
+void mostrarDados(int vDados[], int dadosDisponibles);

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include "creditos.h"
 #include "menu.h"
 #include "juego.h"
 #include "dados.h"

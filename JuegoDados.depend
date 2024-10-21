@@ -17,28 +17,30 @@
 	<iostream>
 	"juego.h"
 
-1729453861 source:c:\users\manu_\desktop\facuc++\tp_integrador\juego.cpp
+1729469629 source:c:\users\manu_\desktop\facuc++\tp_integrador\juego.cpp
 	<iostream>
 	<limits>
-	"juego.h"
 	"dados.h"
+	"juego.h"
 
-1729454108 c:\users\manu_\desktop\facuc++\tp_integrador\juego.h
+1729471450 c:\users\manu_\desktop\facuc++\tp_integrador\juego.h
 
-1729453100 source:c:\users\manu_\desktop\facuc++\tp_integrador\main.cpp
+1729466132 source:c:\users\manu_\desktop\facuc++\tp_integrador\main.cpp
 	<iostream>
 	<ctime>
+	"creditos.h"
 	"menu.h"
 	"juego.h"
 	"dados.h"
 
 1729305700 c:\users\manu_\desktop\facuc++\tp_integrador\menu.h
 
-1729453525 source:c:\users\manu_\desktop\facuc++\tp_integrador\menu.cpp
+1729471452 source:c:\users\manu_\desktop\facuc++\tp_integrador\menu.cpp
 	<iostream>
 	"menu.h"
 	"juego.h"
 	"dados.h"
+	"creditos.h"
 
 1729285363 source:c:\users\usuario\desktop\utn_c++\tp_integrador\juego.cpp
 	<iostream>
@@ -54,5 +56,15 @@
 
 1729291522 c:\users\usuario\desktop\utn_c++\tp_integrador\menu.h
 
-1729454054 c:\users\manu_\desktop\facuc++\tp_integrador\dados.h
+1729470414 c:\users\manu_\desktop\facuc++\tp_integrador\dados.h
+
+1729471572 source:c:\users\manu_\desktop\facuc++\tp_integrador\dados.cpp
+	<iostream>
+	"dados.h"
+
+1729465741 c:\users\manu_\desktop\facuc++\tp_integrador\creditos.h
+
+1729466098 source:c:\users\manu_\desktop\facuc++\tp_integrador\creditos.cpp
+	<iostream>
+	"creditos.h"
 

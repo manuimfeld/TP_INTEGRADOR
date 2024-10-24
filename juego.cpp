@@ -34,7 +34,6 @@ void jugarModoSolitario(string nombreJugador)
     {
         rondaActual++;
         int puntajeTotalRonda = 0; // Puntaje acumulado en la ronda actual
-
         int tiradaActual = 0;
         bool continuarTirada = true;
 
@@ -46,7 +45,7 @@ void jugarModoSolitario(string nombreJugador)
         int bloqueador2 = tirarDado();
 
         // Se ejecuta el siguiente bucle siempre y cuando el jugador quiera seguir una tirada más (decisión al final)
-        while (continuarTirada)
+        while (continuarTirada && dadosDisponibles > 0)
         {
             tiradaActual++;
 
@@ -54,12 +53,13 @@ void jugarModoSolitario(string nombreJugador)
             cout << "Tirada #" << tiradaActual << " del jugador: " << nombreJugador << endl;
             cout << endl;
 
-            // Se ejecuta la tirada
-            int puntajeTirada = ejecutarTirada(dados, dadosDisponibles, bloqueador1, bloqueador2); // Muestra la información de la tirada en consola, y retorna la puntuación
+            // // Se ejecuta la tirada y sumamos la puntuación
+            int puntajeTirada = ejecutarTirada(dados, dadosDisponibles, bloqueador1, bloqueador2);
             puntajeTotalRonda += puntajeTirada;
 
             cout << "Puntaje total de la ronda: " << puntajeTotalRonda << endl;
 
+            // Actualizamos los dados disponibles
             dadosDisponibles -= calcularDadosDisponibles(dados, dadosDisponibles, bloqueador1, bloqueador2);
 
             if (dadosDisponibles > 0)
@@ -68,30 +68,29 @@ void jugarModoSolitario(string nombreJugador)
             }
             else
             {
-                puntajeTotalRonda = 0;
-                break;
+                cout << "Te quedaste sin dados, tu puntaje en esta ronda fue 0" << endl;
+                puntajeTotalRonda = 0;   // Aseguramos que el puntaje de la ronda sea 0
+                continuarTirada = false; // Salimos del bucle de tiradas
             }
         }
 
-        if (puntajeTotalRonda == 0)
-        {
-            cout << "Fin de la ronda #" << rondaActual << endl;
-            cout << "Te quedaste sin dados, tu puntaje en esta ronda fue 0" << endl;
-            cout << "Puntaje total de la partida hasta ahora: " << puntajeTotal << endl;
-            dadosDisponibles = 5;
-            continuarRonda = nuevaRonda();
-        }
-
-        // Sumamos el puntaje de la ronda en el puntaje total de la partida
+        // Sumamos el puntaje de la ronda al total de la partida
         puntajeTotal += puntajeTotalRonda;
 
-        // Mostrar el puntaje total acumulado al final de la ronda
+        // Mostrar los resultados finales de la ronda
         mostrarResultadosFinales(rondaActual, puntajeTotalRonda, puntajeTotal);
 
-        // Le preguntamos al jugador si quiere jugar otra ronda
+        // Le preguntamos al jugador si quiere otra ronda (tenga o no dados disponibles)
         continuarRonda = nuevaRonda();
+
+        // Se reinician los dados disponibles para la siguiente ronda
+        if (continuarRonda)
+        {
+            dadosDisponibles = 5;
+        }
     }
 
+    // Finalizamos el juego
     cout << "Partida finalizada." << endl;
     cout << "Tu puntuacion en esta partida fue de: " << puntajeTotal << " puntos" << endl;
 }

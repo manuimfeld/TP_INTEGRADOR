@@ -1,200 +1,97 @@
 #include <iostream>
 #include <limits>
+#include "dados.h"
 #include "juego.h"
+#include "ronda.h"
+#include "tirada.h"
+#include "puntaje.h"
+#include "mensajes.h"
 
 using namespace std;
 
-int tirarDado()
+int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2)
 {
-    return rand() % 6 + 1;
-}
-
-void tiradaDeDados(int vDados[], int cantidad)
-{
-    for (int i = 0; i < cantidad; i++)
-    {
-        vDados[i] = tirarDado();
-    }
-}
-
-void mostrarDados(int vDados[], int cantidad)
-{
-    for (int i = 0; i < cantidad; i++)
-    {
-        cout << " " << vDados[i];
-    }
-
-    cout << endl;
-}
-
-bool nuevaTirada()
-{
-    int opcion;
-    while (true) // Este bucle se va a finalizar cuando aparece un return
-    {
-
-        cout << endl;
-        cout << "---------------------" << endl;
-        cout << "Queres una tirada mas?" << endl;
-        cout << "0. No" << endl;
-        cout << "1. Si" << endl;
-        cin >> opcion;
-
-        // Acá verificamos si el usuario no ingresó un número, así el programa no se rompe o hace algo inesperado
-        if (cin.fail())
-        {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignoramos la entrada incorrecta
-            cout << "Opcion incorrecta! Ingresa un numero valido." << endl;
-            continue; // Volvemos al inicio del bucle
-        }
-
-        // Si llegamos acá, es porque la opción fue un número (entrada válida)
-        switch (opcion)
-        {
-        case 0:
-            system("cls");
-            return false;
-        case 1:
-            return true;
-        default:
-            system("cls");
-            cout << "Opcion incorrecta!" << endl;
-            system("pause");
-            // Acá no usamos continue, ya que el programa va a volver a pedir la opcion de nuevo
-            break;
-        }
-    }
-}
-
-bool nuevaRonda()
-{
-    int opcion;
-    while (true) // Este bucle se va a finalizar cuando aparece un return
-    {
-        cout << endl;
-        cout << "Queres jugar una ronda mas? " << endl;
-        cout << "0. No" << endl;
-        cout << "1. Si" << endl;
-        cin >> opcion;
-
-        // Acá verificamos si el usuario no ingresó un número, así el programa no se rompe o hace algo inesperado
-        if (cin.fail())
-        {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignoramos la entrada incorrecta
-            cout << "Opcion incorrecta! Ingresa un numero valido." << endl;
-            continue; // Volvemos al inicio del bucle
-        }
-
-        // Si llegamos acá, es porque la opción fue un número (entrada válida)
-        switch (opcion)
-        {
-        case 0:
-            system("cls");
-            cout << "Fin del juego." << endl;
-            cout << endl;
-            return false;
-        case 1:
-            system("cls");
-            return true;
-        default:
-            system("cls");
-            cout << "Opcion incorrecta!" << endl;
-            system("pause");
-            // Acá no usamos continue, ya que el programa va a volver a pedir la opcion de nuevo
-            break;
-        }
-    }
-}
-
-int calcularPuntaje(int vDados[], int cantidad, int bloqueador1, int bloqueador2)
-{
-    int puntos = 0;
-
-    for (int i = 0; i < cantidad; i++)
-    {
-        if (vDados[i] != bloqueador1 && vDados[i] != bloqueador2)
-        {
-            puntos += vDados[i]; // Suma los puntos de los dados que no sean igual a los bloqueadores
-        }
-    }
-
-    return puntos;
-}
-
-int ejecutarTirada(int bloqueador1, int bloqueador2)
-{
-    int dados[5];
-    int puntajeTirada;
-
-    tiradaDeDados(dados, 5);                                             // Generar los dados
-    puntajeTirada = calcularPuntaje(dados, 5, bloqueador1, bloqueador2); // Calcular el puntaje de la tirada
+    tiradaDeDados(dados, dadosDisponibles);                                                 // Tirada de dados
+    int puntajeTirada = calcularPuntaje(dados, dadosDisponibles, bloqueador1, bloqueador2); // Calcular el puntaje de la tirada
 
     // Mostrar los bloqueadores, dados y puntaje de tirada
-    cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
-    cout << "Dados: ";
-    mostrarDados(dados, 5);
-    cout << endl;
-    cout << "Puntaje de la tirada: " << puntajeTirada << endl;
+    mostrarResultadosTirada(dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTirada);
 
     return puntajeTirada; // Devuelve el puntaje de la tirada, para sumar en puntajeTotalRonda (en jugarModoSolitario)
 }
 
-void jugarModoSolitario(int jugador)
+void jugarModoSolitario(string nombreJugador)
 {
+    int dados[5];
+    int dadosDisponibles = 5;
     int rondaActual = 0;
     int puntajeTotal = 0; // Total acumulado de todas las rondas
+
     bool continuarRonda = true;
 
-    // Si la ronda se sigue jugando, se ejecuta el bucle
+    // Se ejecuta el bucle cuando arranca la partida o si el usuario quiere seguir jugando la imsma ronda
     while (continuarRonda)
     {
         rondaActual++;
         int puntajeTotalRonda = 0; // Puntaje acumulado en la ronda actual
-        bool continuarTirada = true;
+
         int tiradaActual = 0;
+        bool continuarTirada = true;
 
         cout << "-----------------------------" << endl;
         cout << "Ronda #" << rondaActual << endl;
 
-        // Se ejecuta una tirada de dados para la ronda, siempre que el jugador quiera o tenga dados disponibles
+        // Generamos los bloqueadores para la ronda
+        int bloqueador1 = tirarDado();
+        int bloqueador2 = tirarDado();
+
+        // Se ejecuta el siguiente bucle siempre y cuando el jugador quiera seguir una tirada más (decisión al final)
         while (continuarTirada)
         {
             tiradaActual++;
 
-            // Mostramos el número de la tirada
-            cout << "Tirada #" << tiradaActual << endl;
+            // Mostramos el número de la tirada y el nombre del jugador
+            cout << "Tirada #" << tiradaActual << " del jugador: " << nombreJugador << endl;
             cout << endl;
 
-            // Generamos los bloqueadores para la nueva tirada
-            int bloqueador1 = tirarDado();
-            int bloqueador2 = tirarDado();
-
-            // Ejecutar la tirada y obtener su puntaje y dados
-            int puntajeTirada = ejecutarTirada(bloqueador1, bloqueador2);
-
-            // Sumamos el puntaje de la tirada al puntaje total de la ronda
+            // Se ejecuta la tirada
+            int puntajeTirada = ejecutarTirada(dados, dadosDisponibles, bloqueador1, bloqueador2); // Muestra la información de la tirada en consola, y retorna la puntuación
             puntajeTotalRonda += puntajeTirada;
 
-            // Mostramos los puntos totales acumulados de la ronda
             cout << "Puntaje total de la ronda: " << puntajeTotalRonda << endl;
 
-            continuarTirada = nuevaTirada(); // Le preguntamos al jugador si quiere una nueva tirada de dados en esta ronda
+            dadosDisponibles -= calcularDadosDisponibles(dados, dadosDisponibles, bloqueador1, bloqueador2);
+
+            if (dadosDisponibles > 0)
+            {
+                continuarTirada = nuevaTirada(); // Le preguntamos al jugador si quiere una nueva tirada de dados en esta ronda
+            }
+            else
+            {
+                puntajeTotalRonda = 0;
+                break;
+            }
+        }
+
+        if (puntajeTotalRonda == 0)
+        {
+            cout << "Fin de la ronda #" << rondaActual << endl;
+            cout << "Te quedaste sin dados, tu puntaje en esta ronda fue 0" << endl;
+            cout << "Puntaje total de la partida hasta ahora: " << puntajeTotal << endl;
+            dadosDisponibles = 5;
+            continuarRonda = nuevaRonda();
         }
 
         // Sumamos el puntaje de la ronda en el puntaje total de la partida
         puntajeTotal += puntajeTotalRonda;
 
         // Mostrar el puntaje total acumulado al final de la ronda
-        cout << "Fin de la ronda #" << rondaActual << endl;
-        cout << endl;
-        cout << "Puntaje total de la ronda: " << puntajeTotalRonda << endl;
-        cout << "Puntaje total de la partida: " << puntajeTotal << endl;
+        mostrarResultadosFinales(rondaActual, puntajeTotalRonda, puntajeTotal);
 
         // Le preguntamos al jugador si quiere jugar otra ronda
         continuarRonda = nuevaRonda();
     }
 
+    cout << "Partida finalizada." << endl;
     cout << "Tu puntuacion en esta partida fue de: " << puntajeTotal << " puntos" << endl;
 }

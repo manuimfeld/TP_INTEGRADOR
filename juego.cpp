@@ -7,7 +7,7 @@ using namespace std;
 
 void mensaje()
 {
-    cout << "HOLA";
+    cout << "HOLA LOQUITOS";
 }
 
 string nombreJugador()

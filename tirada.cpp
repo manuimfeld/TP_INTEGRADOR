@@ -1,4 +1,5 @@
 #include <iostream>
+#include "dados.h"
 
 using namespace std;
 
@@ -40,4 +41,11 @@ bool nuevaTirada()
             break;
         }
     }
+}
+
+void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1, int bloqueador2, int puntajeTirada)
+{
+    mostrarBloqueadores(bloqueador1, bloqueador2);
+    mostrarDados(dados, dadosDisponibles);
+    cout << "Puntaje de la tirada: " << puntajeTirada << endl;
 }

@@ -3,6 +3,7 @@
 #include "juego.h"
 #include "dados.h"
 #include "creditos.h"
+#include "jugador.h"
 
 using namespace std;
 

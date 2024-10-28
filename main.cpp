@@ -10,8 +10,10 @@ using namespace std;
 int main()
 {
      srand(time(0));
+     string actualMejorJugador = "";
+     int actualMejorPuntuacion = 0;
 
-     menu();
+     menu(actualMejorJugador, actualMejorPuntuacion);
 
      return 0;
 }

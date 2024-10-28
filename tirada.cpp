@@ -8,7 +8,7 @@ using namespace std;
 void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1, int bloqueador2, int puntajeTirada)
 {
     mostrarBloqueadores(bloqueador1, bloqueador2);
-    mostrarDados(dados, dadosDisponibles);
+    mostrarDados(dados, dadosDisponibles, bloqueador1, bloqueador2);
     cout << "Puntaje de la tirada: " << puntajeTirada << endl;
 }
 

@@ -6,10 +6,11 @@
 #include "tirada.h"
 #include "puntaje.h"
 #include "mensajes.h"
+#include "estadisticas.h"
 
 using namespace std;
 
-void jugarModoSolitario(string nombreJugador)
+void jugarModoSolitario(string nombreJugador, string &actualMejorJugador, int &actualMejorPuntuacion)
 {
     system("cls");
     int dados[5];
@@ -58,7 +59,7 @@ void jugarModoSolitario(string nombreJugador)
             else
             {
                 cout << "-----------------------------" << endl;
-                cout << "Te quedaste sin dados, tu puntaje en esta ronda fue 0" << endl;
+                cout << "Te quedaste sin dados, tu puntaje en esta ronda se reinicia a 0" << endl;
                 puntajeTotalRonda = 0;   // Aseguramos que el puntaje de la ronda sea 0
                 continuarTirada = false; // Salimos del bucle de tiradas
             }
@@ -66,6 +67,7 @@ void jugarModoSolitario(string nombreJugador)
 
         // Sumamos el puntaje de la ronda al total de la partida
         puntajeTotal += puntajeTotalRonda;
+        actualizarEstadisticas(actualMejorJugador, actualMejorPuntuacion, nombreJugador, puntajeTotal);
 
         // Mostrar los resultados finales de la ronda
         mostrarResultadosFinales(rondaActual, puntajeTotalRonda, puntajeTotal);

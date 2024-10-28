@@ -2,5 +2,5 @@
 
 using namespace std;
 
-void menu();
+void menu(string &actualMejorJugador, int &actualMejorPuntuacion);
 void mostrarCreditos();

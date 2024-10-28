@@ -4,13 +4,13 @@
 #include "dados.h"
 #include "creditos.h"
 #include "jugador.h"
+#include "estadisticas.h"
 
 using namespace std;
 
-void menu()
+void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
 {
     bool juego = true;
-
     int opcion;
 
     do
@@ -46,7 +46,7 @@ void menu()
             system("cls");
             cout << "Por favor indique su nombre." << endl;
             // En C++ las funciones antes de ejecutar las instrucciones, primero resuelve los parametros (en este caso, el jugador tiene que escribir su nombre)
-            jugarModoSolitario(nombreJugador());
+            jugarModoSolitario(nombreJugador(), actualMejorJugador, actualMejorPuntuacion);
             system("pause");
             break;
 
@@ -61,6 +61,7 @@ void menu()
             /// PlaySound(TEXT("MENU.wav"),NULL,SND_SYNC);
             system("cls");
             cout << "Estadisticas" << endl;
+            mostrarEstadisticas(actualMejorJugador, actualMejorPuntuacion);
             system("pause");
             break;
 

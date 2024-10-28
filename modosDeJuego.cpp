@@ -16,24 +16,34 @@ void jugarModoSolitario(string nombreJugador, string &actualMejorJugador, int &a
     int dados[5];
     int dadosDisponibles = 5;
     int rondaActual = 0;
-    int puntajeTotal = 0;
+    int puntajeTotal = 0; // Acá vamos a guardar los puntos que sumamos a lo largo de todas las rondas y tiradas
     bool continuarRonda = true;
 
+    // Cada vez que empiece una ronda, se ejecutan las siguientes funciones del bucle
     while (continuarRonda)
     {
         rondaActual++;
         int bloqueador1, bloqueador2;
-        iniciarRonda(bloqueador1, bloqueador2);
+        iniciarRonda(bloqueador1, bloqueador2); // Guardamos los bloqueadores de la ronda
 
-        int puntajeTurno = ejecutarTurnoJugador(nombreJugador, dados, dadosDisponibles, bloqueador1, bloqueador2);
-        continuarRonda = finalizarRonda(puntajeTurno, puntajeTotal, rondaActual);
+        cout << "Turno de: " << nombreJugador << endl;
+        cout << "------------" << endl;
+        cout << "Ronda: " << rondaActual << endl;
+        cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
+
+        // Se inician las tiradas del jugador (ejecutarTurnoJugador)
+        // IMPORTANTE: leer bien la función por dentro
+        // Esta misma se encarga se preguntarle al jugador si quiere nuevas tiradas, al final, devuelve un numero (la puntuación total de todas las tiradas)
+        int puntajeRonda = ejecutarTurnoJugador(nombreJugador, dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTotal); // Guardamos el puntaje de la ronda al finalizar las tiradas
+
+        continuarRonda = finalizarRonda(puntajeRonda, puntajeTotal, rondaActual); // Le preguntamos al jugador si quiere jugar una nueva ronda
 
         if (puntajeTotal > actualMejorPuntuacion)
         {
             actualizarEstadisticas(actualMejorJugador, actualMejorPuntuacion, nombreJugador, puntajeTotal);
         }
 
-        dadosDisponibles = 5; // Reiniciar dados para la próxima ronda
+        dadosDisponibles = 5; // Al iniciar una nueva ronda, reiniciamos los dados disponibles y se vuelven a ejecutar las funciones del bucle de principio a fin
     }
     cout << "Partida finalizada. Puntaje total: " << puntajeTotal << " puntos" << endl;
 }

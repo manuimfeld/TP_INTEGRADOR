@@ -1,7 +1,6 @@
 #include <iostream>
 #include <limits>
 #include "dados.h"
-#include "juego.h"
 #include "ronda.h"
 #include "tirada.h"
 #include "puntaje.h"

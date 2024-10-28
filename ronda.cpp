@@ -8,7 +8,6 @@ void iniciarRonda(int &bloqueador1, int &bloqueador2)
 {
     bloqueador1 = tirarDado();
     bloqueador2 = tirarDado();
-    cout << "Bloqueadores: " << bloqueador1 << " y " << bloqueador2 << endl;
 }
 
 bool nuevaRonda()
@@ -52,10 +51,10 @@ bool nuevaRonda()
     }
 }
 
-bool finalizarRonda(int puntajeTurno, int &puntajeTotal, int rondaActual)
+bool finalizarRonda(int puntajeRonda, int &puntajeTotal, int rondaActual)
 {
-    puntajeTotal += puntajeTurno;
     cout << "Fin de la ronda #" << rondaActual << endl;
+    cout << "Puntaje de la ronda: " << puntajeRonda << endl;
     cout << "Puntaje acumulado: " << puntajeTotal << endl;
     return nuevaRonda();
 }

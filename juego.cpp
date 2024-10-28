@@ -9,17 +9,6 @@
 
 using namespace std;
 
-int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2)
-{
-    tiradaDeDados(dados, dadosDisponibles);                                                 // Tirada de dados
-    int puntajeTirada = calcularPuntaje(dados, dadosDisponibles, bloqueador1, bloqueador2); // Calcular el puntaje de la tirada
-
-    // Mostrar los bloqueadores, dados y puntaje de tirada
-    mostrarResultadosTirada(dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTirada);
-
-    return puntajeTirada; // Devuelve el puntaje de la tirada, para sumar en puntajeTotalRonda (en jugarModoSolitario)
-}
-
 void jugarModoSolitario(string nombreJugador)
 {
     int dados[5];

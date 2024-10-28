@@ -1,6 +1,6 @@
 #include <iostream>
 #include "menu.h"
-#include "juego.h"
+#include "modosDeJuego.h"
 #include "dados.h"
 #include "creditos.h"
 #include "jugador.h"

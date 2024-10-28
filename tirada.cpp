@@ -12,15 +12,19 @@ void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1,
     cout << "Puntaje de la tirada: " << puntajeTirada << endl;
 }
 
-int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2)
+int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2, int tiradaActual, int &puntajeTurno)
 {
-    tiradaDeDados(dados, dadosDisponibles);                                                 // Tirada de dados
-    int puntajeTirada = calcularPuntaje(dados, dadosDisponibles, bloqueador1, bloqueador2); // Calcular el puntaje de la tirada
+    tiradaDeDados(dados, dadosDisponibles);                                                 // Tiramos los dados segun los dados disponibles que tenga el jugador
+    int puntajeTirada = calcularPuntaje(dados, dadosDisponibles, bloqueador1, bloqueador2); // Calculamos el puntaje de la tirada y lo guardamos en la variable
 
-    // Mostrar los bloqueadores, dados y puntaje de tirada
-    mostrarResultadosTirada(dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTirada);
+    // Mostrar los resultados de la tirada
+    cout << "---------------------" << endl;
+    cout << "Tirada: " << tiradaActual << endl;
+    cout << "Dados: ";
+    mostrarDados(dados, dadosDisponibles, bloqueador1, bloqueador2);
+    cout << "Puntaje de la tirada: " << puntajeTirada << endl;
 
-    return puntajeTirada; // Devuelve el puntaje de la tirada, para sumar en puntajeTotalRonda (en jugarModoSolitario)
+    return puntajeTirada; // Devolvemos el puntaje de la tirada
 }
 
 bool nuevaTirada()
@@ -28,8 +32,6 @@ bool nuevaTirada()
     int opcion;
     while (true) // Este bucle se va a finalizar cuando aparece un return
     {
-
-        cout << endl;
         cout << "---------------------" << endl;
         cout << "Queres una tirada mas?" << endl;
         cout << "0. No" << endl;

@@ -24,7 +24,7 @@ void jugarModoSolitario(string nombreJugador, string &actualMejorJugador, int &a
     {
         rondaActual++;
         int bloqueador1, bloqueador2;
-        iniciarRonda(bloqueador1, bloqueador2); // Guardamos los bloqueadores de la ronda
+        iniciarBloqueadores(bloqueador1, bloqueador2); // Guardamos los bloqueadores de la ronda
 
         cout << "Turno de: " << nombreJugador << endl;
         cout << "------------" << endl;

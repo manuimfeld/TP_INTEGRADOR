@@ -11,6 +11,7 @@ using namespace std;
 
 void jugarModoSolitario(string nombreJugador)
 {
+    system("cls");
     int dados[5];
     int dadosDisponibles = 5;
     int rondaActual = 0;
@@ -26,9 +27,6 @@ void jugarModoSolitario(string nombreJugador)
         int tiradaActual = 0;
         bool continuarTirada = true;
 
-        cout << "-----------------------------" << endl;
-        cout << "Ronda #" << rondaActual << endl;
-
         // Generamos los bloqueadores para la ronda
         int bloqueador1 = tirarDado();
         int bloqueador2 = tirarDado();
@@ -38,7 +36,9 @@ void jugarModoSolitario(string nombreJugador)
         {
             tiradaActual++;
 
-            // Mostramos el número de la tirada y el nombre del jugador
+            // Mostramos el número de la ronda, tirada y el nombre del jugador
+            cout << "-----------------------------" << endl;
+            cout << "Ronda #" << rondaActual << endl;
             cout << "Tirada #" << tiradaActual << " del jugador: " << nombreJugador << endl;
             cout << endl;
 
@@ -57,6 +57,7 @@ void jugarModoSolitario(string nombreJugador)
             }
             else
             {
+                cout << "-----------------------------" << endl;
                 cout << "Te quedaste sin dados, tu puntaje en esta ronda fue 0" << endl;
                 puntajeTotalRonda = 0;   // Aseguramos que el puntaje de la ronda sea 0
                 continuarTirada = false; // Salimos del bucle de tiradas

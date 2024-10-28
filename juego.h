@@ -2,6 +2,7 @@
 
 using namespace std;
 
+void menu();
 string nombreJugador();
 void jugarModoSolitario(string nombreJugador);
 bool nuevaTirada();

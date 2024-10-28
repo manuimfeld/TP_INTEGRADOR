@@ -8,7 +8,7 @@ bool nuevaRonda()
     int opcion;
     while (true) // Este bucle se va a finalizar cuando aparece un return
     {
-        cout << endl;
+        cout << "-----------------------------" << endl;
         cout << "Queres jugar una ronda mas? " << endl;
         cout << "0. No" << endl;
         cout << "1. Si" << endl;

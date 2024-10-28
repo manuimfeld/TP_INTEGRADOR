@@ -5,6 +5,13 @@
 
 using namespace std;
 
+void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1, int bloqueador2, int puntajeTirada)
+{
+    mostrarBloqueadores(bloqueador1, bloqueador2);
+    mostrarDados(dados, dadosDisponibles);
+    cout << "Puntaje de la tirada: " << puntajeTirada << endl;
+}
+
 int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2)
 {
     tiradaDeDados(dados, dadosDisponibles);                                                 // Tirada de dados
@@ -54,11 +61,4 @@ bool nuevaTirada()
             break;
         }
     }
-}
-
-void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1, int bloqueador2, int puntajeTirada)
-{
-    mostrarBloqueadores(bloqueador1, bloqueador2);
-    mostrarDados(dados, dadosDisponibles);
-    cout << "Puntaje de la tirada: " << puntajeTirada << endl;
 }

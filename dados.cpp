@@ -18,7 +18,6 @@ void tiradaDeDados(int vDados[], int dadosDisponibles)
 
 void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)
 {
-    cout << "Dados:";
     for (int i = 0; i < dadosDisponibles; i++)
     {
         if (vDados[i] == bloqueador1 || vDados[i] == bloqueador2)

@@ -14,7 +14,7 @@ void jugarModoSolitario(string nombreJugador, string &actualMejorJugador, int &a
 {
     system("cls");
     int dados[5];
-    int dadosDisponibles = 5;
+    int dadosDisponibles = 2;
     int rondaActual = 0;
     int puntajeTotal = 0; // Acá vamos a guardar los puntos que sumamos a lo largo de todas las rondas y tiradas
     bool continuarRonda = true;
@@ -43,7 +43,7 @@ void jugarModoSolitario(string nombreJugador, string &actualMejorJugador, int &a
             actualizarEstadisticas(actualMejorJugador, actualMejorPuntuacion, nombreJugador, puntajeTotal);
         }
 
-        dadosDisponibles = 5; // Al iniciar una nueva ronda, reiniciamos los dados disponibles y se vuelven a ejecutar las funciones del bucle de principio a fin
+        dadosDisponibles = 2; // Al iniciar una nueva ronda, reiniciamos los dados disponibles y se vuelven a ejecutar las funciones del bucle de principio a fin
     }
     cout << "Partida finalizada. Puntaje total: " << puntajeTotal << " puntos" << endl;
 }

@@ -4,16 +4,16 @@
 #include "ronda.h"
 #include "estadisticas.h"
 #include "menu.h"
-#include "rutil.h"
-#include "tuner.h"
 #include "modosdejuego.h"
 #include <iostream>
 #include "mensajes.h"
 #include "turnos.h"
+#include "modoDosJugadores.h"
 
 using namespace std;
 
-void modoDosJugadores(string nombreJugador1, string nombreJugador2, string &actualMejorJugador, int &actualMejorPuntuacion) {
+void modoDosJugadores(string nombreJugador1, string nombreJugador2, string &actualMejorJugador, int &actualMejorPuntuacion) 
+{
     system("cls");
     int dados[5];
     int dadosDisponibles = 5;
@@ -27,7 +27,7 @@ void modoDosJugadores(string nombreJugador1, string nombreJugador2, string &actu
     while (continuarRonda) {
         rondaActual++;
         int bloqueador1, bloqueador2;
-        iniciarRonda(bloqueador1, bloqueador2);  /// Generamos los bloqueadores de la ronda
+        iniciarBloqueadores(bloqueador1, bloqueador2);  /// Generamos los bloqueadores de la ronda
 
 
     /// Determinar el nombre del jugador que tiene el turno

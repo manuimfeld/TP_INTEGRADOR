@@ -4,6 +4,7 @@
 #include "menu.h"
 #include "modosDeJuego.h"
 #include "dados.h"
+#include "modoDosJugadores.h"
 
 using namespace std;
 

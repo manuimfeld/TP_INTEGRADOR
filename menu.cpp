@@ -5,6 +5,7 @@
 #include "creditos.h"
 #include "jugador.h"
 #include "estadisticas.h"
+#include "modoDosJugadores.h"
 
 using namespace std;
 
@@ -56,6 +57,8 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
         case 2:
             system("cls");
             cout << "Modo dos jugadores" << endl;
+            cout << "Por favor indiquen sus nombres." << endl;
+            modoDosJugadores(nombreJugador1(), nombreJugador2(), actualMejorJugador, actualMejorPuntuacion);
             system("pause");
             break;
 

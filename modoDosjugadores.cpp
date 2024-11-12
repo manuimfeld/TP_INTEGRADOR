@@ -10,6 +10,13 @@
 #include "turnos.h"
 #include "modoDosJugadores.h"
 
+/*
+Tenemos que arreglar: 
+pasaje de ronda en caso de que no se quiera continuar la ronda
+mostrar puntos al final de la ronda
+nombres al reves 
+*/ 
+
 using namespace std;
 
 void modoDosJugadores(string nombreJugador1, string nombreJugador2, string &actualMejorJugador, int &actualMejorPuntuacion) 
@@ -20,11 +27,11 @@ void modoDosJugadores(string nombreJugador1, string nombreJugador2, string &actu
     int rondaActual = 0;
     int puntajeTotalJugador1 = 0;
     int puntajeTotalJugador2 = 0;
-    bool continuarRonda = true;
+    int rondasrestantes = 3;
     bool turnoJugador1 = true; /// Indicador de quien tiene el turno (true para jugador1, false para jugador2)
 
     /// Empezamos las rondas, alternando entre los dos jugadores
-    while (continuarRonda) {
+    while (rondasrestantes >= 1) {
         rondaActual++;
         int bloqueador1, bloqueador2;
         iniciarBloqueadores(bloqueador1, bloqueador2);  /// Generamos los bloqueadores de la ronda
@@ -53,7 +60,7 @@ void modoDosJugadores(string nombreJugador1, string nombreJugador2, string &actu
         int puntajeRonda = ejecutarTurnoJugador(nombreJugador, dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTotal);
 
         /// Preguntamos si el jugador desea continuar con una nueva ronda
-        continuarRonda = finalizarRonda(puntajeRonda, puntajeTotal, rondaActual);
+        rondasrestantes = calcularRondasRestantes(rondasrestantes);
 
         /// Si el puntaje del jugador es mayor que el mejor puntaje hasta ahora, actualizamos las estadísticas
         if (puntajeTotal > actualMejorPuntuacion) {

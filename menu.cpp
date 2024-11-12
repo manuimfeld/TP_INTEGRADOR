@@ -58,7 +58,7 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
             system("cls");
             cout << "Modo dos jugadores" << endl;
             cout << "Por favor indiquen sus nombres." << endl;
-            modoDosJugadores(nombreJugador1(), nombreJugador2(), actualMejorJugador, actualMejorPuntuacion);
+            modoDosJugadores(nombreJugador1(), nombreJugador2(),actualMejorJugador, actualMejorPuntuacion);
             system("pause");
             break;
 

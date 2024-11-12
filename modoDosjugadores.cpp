@@ -12,7 +12,7 @@
 
 /*
 Tenemos que arreglar: 
-pasaje de ronda en caso de que no se quiera continuar la ronda
+se restan rondas en total de en vez de por jugador en cada tirada
 mostrar puntos al final de la ronda
 nombres al reves 
 */ 

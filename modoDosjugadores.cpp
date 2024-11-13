@@ -70,7 +70,7 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
     {
         cout << "Felicidades a " << nombreJugador1 << " por la victoria, te ganaste un aplauso del profe" << endl;
     }
-    else if (puntajeTotal2 < puntajeTotal1)
+    else if (puntajeTotal2 > puntajeTotal1)
     {
         cout << "Felicidades a " << nombreJugador2 << " por la victoria, te ganaste un aplauso del profe" << endl;
     }

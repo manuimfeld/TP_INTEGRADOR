@@ -6,8 +6,10 @@ using namespace std;
 
 void reglas()
 {
+    cout << endl;
     cout << "Las reglas del juego son las siguientes: " << endl << endl;
-    cout << "El juego consiste en una serie de tres rondas, en las cuales los jugadores deberán tirar dos dados llamados bloqueadores y ";
+    cout << "El juego consiste en una serie de tres rondas";
+    cout << "en las cuales los jugadores deberán tirar dos dados llamados bloqueadores y ";
     cout << "numerosas tiradas de hasta cinco dados." << endl << endl;
     cout << "Por cada tirada de una ronda se deberan sumar todos los dados de la tirada cuyos valores no coincidan con los dados bloqueadores." << endl << endl;
     cout << "Cada dado cuyo valor sea igual al de un bloqueador, no podra utilizarse en las siguientes tiradas de la ronda.";

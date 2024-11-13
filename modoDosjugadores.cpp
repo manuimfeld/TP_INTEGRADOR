@@ -19,8 +19,6 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
     int puntajeTotal1 = 0;
     int puntajeTotal2 = 0; 
     int rondasrestantes = 3;
-    
-    
 
     while (rondasrestantes > 0)
     {
@@ -63,8 +61,6 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
         dadosDisponibles = 5;
         rondasrestantes = calcularRondasRestantes(rondasrestantes);
     }
-
-    
 
     cout << "Partida Finalizada" << endl;
     cout << "Puntaje total jugador 1: " << puntajeTotal1 << " puntos" << endl;

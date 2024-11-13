@@ -62,17 +62,17 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
         rondasrestantes = calcularRondasRestantes(rondasrestantes);
     }
 
-    cout << "Partida Finalizada" << endl;
-    cout << "Puntaje total jugador 1: " << puntajeTotal1 << " puntos" << endl;
-    cout << "Puntaje total jugador 2: " << puntajeTotal2 << " puntos" << endl;
+    cout << "Partida Finalizada" << endl << endl;
+    cout << "Puntaje total jugador 1: " << puntajeTotal1 << " puntos" << endl << endl;
+    cout << "Puntaje total jugador 2: " << puntajeTotal2 << " puntos" << endl << endl;
 
     if (puntajeTotal1 > puntajeTotal2)
     {
-        cout << "Felicidades a " << nombreJugador1 << " por la victoria, te ganaste un aplauso del profe" << endl;
+        cout << "Felicidades a " << nombreJugador1 << " por la victoria, te ganaste un aplauso del profe" << endl << endl;
     }
     else if (puntajeTotal2 > puntajeTotal1)
     {
-        cout << "Felicidades a " << nombreJugador2 << " por la victoria, te ganaste un aplauso del profe" << endl;
+        cout << "Felicidades a " << nombreJugador2 << " por la victoria, te ganaste un aplauso del profe" << endl << endl;
     }
 }
 

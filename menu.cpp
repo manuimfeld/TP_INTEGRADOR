@@ -6,6 +6,7 @@
 #include "jugador.h"
 #include "estadisticas.h"
 #include "modoDosJugadores.h"
+#include "reglas.h"
 
 using namespace std;
 
@@ -21,6 +22,8 @@ void mostrarMenu()
     cout << "|-3) PRESIONE 3 PARA ESTADISTICAS---------------|" << endl;
     cout << "|                                               |" << endl;
     cout << "|-4) PRESIONE 4 PARA CREDITOS-------------------|" << endl;
+    cout << "|                                               |" << endl;
+    cout << "|-5) PRESIONE 5 PARA REGLAS---------------------|" << endl;
     cout << "|                                               |" << endl;
     cout << "|-0) PRESIONE 0 PARA SALIR----------------------|" << endl;
     cout << "|                                               |" << endl;
@@ -73,6 +76,12 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
             system("cls");
             cout << "Créditos" << endl;
             mostrarCreditos();
+            break;
+
+        case 5:
+            system("cls");
+            reglas();
+            system("pause");
             break;
 
         default:

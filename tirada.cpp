@@ -18,11 +18,13 @@ int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloq
     int puntajeTirada = calcularPuntaje(dados, dadosDisponibles, bloqueador1, bloqueador2); // Calculamos el puntaje de la tirada y lo guardamos en la variable
 
     // Mostrar los resultados de la tirada
+    cout << endl;
     cout << "---------------------" << endl;
     cout << "Tirada: " << tiradaActual << endl;
     cout << "Dados: ";
     mostrarDados(dados, dadosDisponibles, bloqueador1, bloqueador2);
     cout << "Puntaje de la tirada: " << puntajeTirada << endl;
+    cout << endl;
 
     return puntajeTirada; // Devolvemos el puntaje de la tirada
 }
@@ -31,11 +33,13 @@ bool nuevaTirada()
 {
     int opcion;
     while (true) // Este bucle se va a finalizar cuando aparece un return
-    {
+    {   
+        cout << endl;
         cout << "---------------------" << endl;
         cout << "Queres una tirada mas?" << endl;
         cout << "0. No" << endl;
         cout << "1. Si" << endl;
+        cout << endl;
         cin >> opcion;
 
         // Acá verificamos si el usuario no ingresó un número, así el programa no se rompe o hace algo inesperado

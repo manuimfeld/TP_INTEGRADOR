@@ -3,7 +3,6 @@
 #include "creditos.h"
 #include "menu.h"
 #include "modoUnJugador.h"
-#include "dados.h"
 #include "modoDosJugadores.h"
 
 using namespace std;

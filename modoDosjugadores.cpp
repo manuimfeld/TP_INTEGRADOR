@@ -41,6 +41,7 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
             actualizarEstadisticas(actualMejorJugador, actualMejorPuntuacion, nombreJugador1, puntajeTotal1);
         }
         
+        system("cls");
 
         dadosDisponibles = 5;
         iniciarBloqueadores(bloqueador1, bloqueador2); 

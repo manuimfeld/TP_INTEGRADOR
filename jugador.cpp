@@ -18,7 +18,7 @@ string nombreJugador1()
     string nombre1;
 
     cout << endl;
-    cout << "Escribe tu nombre: " << endl;
+    cout << "Escribe el nombre del primer jugador: " << endl;
     cin >> nombre1;
     return nombre1;
 }
@@ -26,9 +26,9 @@ string nombreJugador1()
 string nombreJugador2()
 {
     string nombre2;
-    
+
     cout << endl;
-    cout << "Escribe tu nombre: " << endl;
+    cout << "Escribe el nomnbre del segundo jugador: " << endl;
     cin >> nombre2;
     return nombre2;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "menu.h"
-#include "modosDeJuego.h"
+#include "modoUnJugador.h"
 #include "dados.h"
 #include "creditos.h"
 #include "jugador.h"
@@ -58,7 +58,7 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
             system("cls");
             cout << "Modo dos jugadores" << endl;
             cout << "Por favor indiquen sus nombres." << endl;
-            modoDosJugadores(nombreJugador1(), nombreJugador2(),actualMejorJugador, actualMejorPuntuacion);
+            modoDosJugadores(nombreJugador2(), nombreJugador1(), actualMejorJugador, actualMejorPuntuacion);
             system("pause");
             break;
 

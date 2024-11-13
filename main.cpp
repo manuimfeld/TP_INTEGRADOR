@@ -2,7 +2,7 @@
 #include <ctime>
 #include "creditos.h"
 #include "menu.h"
-#include "modosDeJuego.h"
+#include "modoUnJugador.h"
 #include "dados.h"
 #include "modoDosJugadores.h"
 

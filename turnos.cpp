@@ -25,7 +25,7 @@ int ejecutarTurnoJugador(string nombreJugador, int dados[], int &dadosDisponible
 
         else if (multiplicarDados(dados, dadosDisponibles, bloqueador1, bloqueador2))
         {
-            cout << "Que suerte!!!, tus dados fueron todos iguales, tus puntos se multiplican." << endl;
+            cout << "Que suerte!!!, tus dados fueron todos iguales, tus puntos se multiplican x 2." << endl;
             puntajeTotal += puntajeTirada * 2;
             puntajeRonda += puntajeTirada * 2;
             cout << "---------------------" << endl;

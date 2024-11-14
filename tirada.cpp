@@ -25,6 +25,8 @@ int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloq
     cout << "Tirada: " << tiradaActual << endl;
     cout << "Dados: ";
     mostrarDados(dados, dadosDisponibles, bloqueador1, bloqueador2);
+    cout << endl
+         << endl;
     cout << "Puntaje de la tirada: " << puntajeTirada << endl;
     cout << endl;
 
@@ -35,7 +37,7 @@ bool nuevaTirada()
 {
     int opcion;
     while (true) // Este bucle se va a finalizar cuando aparece un return
-    {   
+    {
         cout << endl;
         cout << "---------------------" << endl;
         cout << "Queres una tirada mas?" << endl;

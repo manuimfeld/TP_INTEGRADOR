@@ -9,95 +9,90 @@ using namespace std;
 void dibujarCuadrado(int posx, int posy)
 {
     rlutil::setColor(rlutil::WHITE);
-    for (int x = posx; x <= posx + 7; x++)
+    for (int x = posx; x < posx + 9; x++) // Ancho de 9
     {
-        for (int y = posy; y <= posy + 3; y++)
+        for (int y = posy; y < posy + 5; y++) // Altura de 5
         {
             rlutil::locate(x, y);
             cout << (char)219;
         }
     }
+    rlutil::resetColor();
 }
 
 void dibujarDados(int numero, int posx, int posy)
 {
     dibujarCuadrado(posx, posy); // Dibuja el cuadrado del dado
 
-    // Configura el color de los puntos
+    // Seteamos el color de los puntos del dado
     rlutil::setColor(rlutil::BLACK);
     rlutil::setBackgroundColor(rlutil::WHITE);
 
-    // Dibuja los puntos del dado según el número
+    // Dibujamos los puntitos en los dados
     switch (numero)
     {
     case 1:
-        // Punto central
         rlutil::locate(posx + 4, posy + 2);
         cout << (char)254;
         break;
 
     case 2:
-        // Esquinas opuestas
-        rlutil::locate(posx + 2, posy + 1); // Esquina superior izquierda
+        rlutil::locate(posx + 2, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 3); // Esquina inferior derecha
+        rlutil::locate(posx + 6, posy + 3);
         cout << (char)254;
         break;
 
     case 3:
-        // Dos esquinas y el centro
-        rlutil::locate(posx + 2, posy + 1); // Esquina superior izquierda
+        rlutil::locate(posx + 2, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 4, posy + 2); // Centro
+        rlutil::locate(posx + 4, posy + 2);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 3); // Esquina inferior derecha
+        rlutil::locate(posx + 6, posy + 3);
         cout << (char)254;
         break;
 
     case 4:
-        // Cuatro esquinas
-        rlutil::locate(posx + 2, posy + 1); // Esquina superior izquierda
+        rlutil::locate(posx + 2, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 1); // Esquina superior derecha
+        rlutil::locate(posx + 6, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 2, posy + 3); // Esquina inferior izquierda
+        rlutil::locate(posx + 2, posy + 3);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 3); // Esquina inferior derecha
+        rlutil::locate(posx + 6, posy + 3);
         cout << (char)254;
         break;
 
     case 5:
-        // Cuatro esquinas y el centro
-        rlutil::locate(posx + 2, posy + 1); // Esquina superior izquierda
+        rlutil::locate(posx + 2, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 1); // Esquina superior derecha
+        rlutil::locate(posx + 6, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 4, posy + 2); // Centro
+        rlutil::locate(posx + 4, posy + 2);
         cout << (char)254;
-        rlutil::locate(posx + 2, posy + 3); // Esquina inferior izquierda
+        rlutil::locate(posx + 2, posy + 3);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 3); // Esquina inferior derecha
+        rlutil::locate(posx + 6, posy + 3);
         cout << (char)254;
         break;
 
     case 6:
-        // Tres puntos en cada lado
-        rlutil::locate(posx + 2, posy + 1); // Esquina superior izquierda
+        rlutil::locate(posx + 2, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 2, posy + 2); // Lado izquierdo medio
+        rlutil::locate(posx + 2, posy + 2);
         cout << (char)254;
-        rlutil::locate(posx + 2, posy + 3); // Esquina inferior izquierda
+        rlutil::locate(posx + 2, posy + 3);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 1); // Esquina superior derecha
+        rlutil::locate(posx + 6, posy + 1);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 2); // Lado derecho medio
+        rlutil::locate(posx + 6, posy + 2);
         cout << (char)254;
-        rlutil::locate(posx + 6, posy + 3); // Esquina inferior derecha
+        rlutil::locate(posx + 6, posy + 3);
         cout << (char)254;
         break;
     }
 
-    // Restablece los colores después de dibujar el dado
+    // Reseteamos los colores después de dibujar el dado
     rlutil::setBackgroundColor(rlutil::BLACK);
     rlutil::setColor(rlutil::WHITE);
 }

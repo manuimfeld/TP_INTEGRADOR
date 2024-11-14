@@ -20,11 +20,11 @@ void tiradaDeDados(int vDados[], int dadosDisponibles)
 
 void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)
 {
-    int posx = 1, posy = 10; // Posición inicial de los dados
+    int posx = 1, posy = 10; // Posición inicial de los dados (X e Y)
     for (int i = 0; i < dadosDisponibles; i++)
     {
-        int dadoPosX = posx + i * 10; // Ajuste el espaciado horizontal entre dados
-        int dadoPosY = posy;          // Mantiene todos los dados en la misma fila
+        int dadoPosX = posx + i * 13; // Aumentamos el espaciado horizontal a 13
+        int dadoPosY = posy;          // No aumentamos nada para tener todos los dados en la misma fila sin overflow
 
         if (vDados[i] == bloqueador1 || vDados[i] == bloqueador2)
         {
@@ -36,10 +36,11 @@ void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqu
             rlutil::setColor(rlutil::WHITE); // Mostramos los otros dados de color blanco
             dibujarDados(vDados[i], dadoPosX, dadoPosY);
         }
-        rlutil::resetColor(); // Restablecemos el color después de cada dado
+        rlutil::resetColor();
+        // Reseteamos el color después de cada dado
     }
 
-    cout << endl; // Salto de línea después de mostrar todos los dados
+    cout << endl;
 }
 
 void mostrarBloqueadores(int bloqueador1, int bloqueador2)

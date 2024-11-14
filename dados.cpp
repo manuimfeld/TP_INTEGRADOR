@@ -1,5 +1,7 @@
 #include <iostream>
 #include "dados.h"
+#include "rlutil.h"
+#include "dibujos.h"
 
 using namespace std;
 
@@ -18,19 +20,26 @@ void tiradaDeDados(int vDados[], int dadosDisponibles)
 
 void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)
 {
+    int posx = 1, posy = 10; // Posición inicial de los dados
     for (int i = 0; i < dadosDisponibles; i++)
     {
+        int dadoPosX = posx + i * 10; // Ajuste el espaciado horizontal entre dados
+        int dadoPosY = posy;          // Mantiene todos los dados en la misma fila
+
         if (vDados[i] == bloqueador1 || vDados[i] == bloqueador2)
         {
-            cout << " " << "\033[31m" << vDados[i] << "\033[35m"; // Si el dado es igual a algun bloqueador, lo mostramos en rojo
+            rlutil::setColor(rlutil::RED); // Si el dado es igual a algún bloqueador, lo mostramos en rojo
+            dibujarDados(vDados[i], dadoPosX, dadoPosY);
         }
         else
         {
-            cout << " " << vDados[i];
+            rlutil::setColor(rlutil::WHITE); // Mostramos los otros dados de color blanco
+            dibujarDados(vDados[i], dadoPosX, dadoPosY);
         }
+        rlutil::resetColor(); // Restablecemos el color después de cada dado
     }
 
-    cout << endl;
+    cout << endl; // Salto de línea después de mostrar todos los dados
 }
 
 void mostrarBloqueadores(int bloqueador1, int bloqueador2)
@@ -53,7 +62,7 @@ int calcularDadosDisponibles(int vDados[], int dadosDisponibles, int bloqueador1
     return bloqueados;
 }
 
-/* 
+/*
 mostrar dados originales
 
 void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)

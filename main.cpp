@@ -1,15 +1,13 @@
 #include <iostream>
 #include <ctime>
+#include "menu.h"
 #include <windows.h>
 #include "creditos.h"
-#include "menu.h"
 #include "modoUnJugador.h"
 #include "modoDosJugadores.h"
 #include "rlutil.h"
 
-
 using namespace std;
-
 
 int main()
 {
@@ -22,4 +20,3 @@ int main()
 
      return 0;
 }
-

@@ -2,6 +2,8 @@
 #include <limits>
 #include "dados.h"
 #include "puntaje.h"
+#include "rlutil.h"
+#include "dibujos.h"
 
 using namespace std;
 

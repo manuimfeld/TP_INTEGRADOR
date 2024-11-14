@@ -94,5 +94,5 @@ void dibujarDados(int numero, int posx, int posy)
 
     // Reseteamos los colores después de dibujar el dado
     rlutil::setBackgroundColor(rlutil::BLACK);
-    rlutil::setColor(rlutil::WHITE);
+    rlutil::setColor(rlutil::MAGENTA);
 }

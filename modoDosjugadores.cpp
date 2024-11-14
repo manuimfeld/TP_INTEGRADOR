@@ -29,8 +29,9 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
         cout << "Turno de: " << nombreJugador1 << endl;
         cout << "------------" << endl;
         cout << "Ronda: " << rondaActual << endl;
+        cout << "Puntos de " << nombreJugador1 << " : " << puntajeTotal1 << endl;
+        cout << "Puntos de " << nombreJugador2 << " : " << puntajeTotal2 << endl << endl;
         cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
-
       
         int puntajeRonda = ejecutarTurnoJugador(nombreJugador1, dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTotal1); 
 
@@ -47,7 +48,10 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
         cout << "Turno de: " << nombreJugador2 << endl;
         cout << "------------" << endl;
         cout << "Ronda: " << rondaActual << endl;
+        cout << "Puntos de " << nombreJugador1 << " : " << puntajeTotal1 << endl;
+        cout << "Puntos de " << nombreJugador2 << " : " << puntajeTotal2 << endl << endl;
         cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
+
 
         puntajeRonda = ejecutarTurnoJugador(nombreJugador2, dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTotal2); 
 
@@ -73,6 +77,10 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
     else if (puntajeTotal2 > puntajeTotal1)
     {
         cout << "Felicidades a " << nombreJugador2 << " por la victoria, te ganaste un aplauso del profe" << endl << endl;
+    }
+    else
+    {
+        cout << "Tenemos un empate, se tienen que agarrar a las piñas" << endl;
     }
 }
 

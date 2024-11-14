@@ -70,5 +70,5 @@ void dibujarDados(int numero, int posx, int posy){
 
     rlutil::setBackgroundColor(rlutil::BLACK);
     rlutil::setColor(rlutil::WHITE);
-
+    
 }

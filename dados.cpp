@@ -22,7 +22,7 @@ void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqu
     {
         if (vDados[i] == bloqueador1 || vDados[i] == bloqueador2)
         {
-            cout << " " << "\033[31m" << vDados[i] << "\033[0m"; // Si el dado es igual a algun bloqueador, lo mostramos en rojo
+            cout << " " << "\033[31m" << vDados[i] << "\033[35m"; // Si el dado es igual a algun bloqueador, lo mostramos en rojo
         }
         else
         {
@@ -52,3 +52,21 @@ int calcularDadosDisponibles(int vDados[], int dadosDisponibles, int bloqueador1
 
     return bloqueados;
 }
+
+/* 
+mostrar dados originales
+
+void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)
+{
+    for (int i = 0; i < dadosDisponibles; i++)
+    {
+        if (vDados[i] == bloqueador1 || vDados[i] == bloqueador2)
+        {
+            cout << " " << "\033[31m" << vDados[i] << "\033[35m"; // Si el dado es igual a algun bloqueador, lo mostramos en rojo
+        }
+        else
+        {
+            cout << " " << vDados[i];
+        }
+    }
+*/

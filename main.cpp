@@ -13,6 +13,7 @@ using namespace std;
 
 int main()
 {
+     rlutil::setColor(rlutil::MAGENTA);
      srand(time(0));
      string actualMejorJugador = "";
      int actualMejorPuntuacion = 0;

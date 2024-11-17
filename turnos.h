@@ -3,4 +3,4 @@
 
 using namespace std;
 
-int ejecutarTurnoJugador(string nombreJugador, int dados[], int &dadosDisponibles, int bloqueador1, int bloqueador2, int &puntajeTotal);
+int ejecutarTurnoJugador(int rondaActual, string nombreJugador, int dados[], int &dadosDisponibles, int bloqueador1, int bloqueador2, int &puntajeTotal);

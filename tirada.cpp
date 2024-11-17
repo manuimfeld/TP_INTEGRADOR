@@ -4,6 +4,7 @@
 #include "puntaje.h"
 #include "rlutil.h"
 #include "dibujos.h"
+#include <string>
 
 using namespace std;
 
@@ -14,11 +15,16 @@ void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1,
     cout << "Puntaje de la tirada: " << puntajeTirada << endl;
 }
 
-int ejecutarTirada(int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2, int tiradaActual, int &puntajeTurno)
+int ejecutarTirada(int rondaActual, string nombreJugador, int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2, int tiradaActual, int &puntajeTurno)
 {
+    system("cls");
     tiradaDeDados(dados, dadosDisponibles);                                                 // Tiramos los dados segun los dados disponibles que tenga el jugador
     int puntajeTirada = calcularPuntaje(dados, dadosDisponibles, bloqueador1, bloqueador2); // Calculamos el puntaje de la tirada y lo guardamos en la variable
 
+    cout << "Turno de: " << nombreJugador << endl;
+    cout << "------------" << endl;
+    cout << "Ronda: " << rondaActual << endl;
+    cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
     // Mostrar los resultados de la tirada
     cout << endl;
     cout << "---------------------" << endl;

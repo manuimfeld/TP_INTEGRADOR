@@ -7,6 +7,7 @@
 #include "estadisticas.h"
 #include "modoDosJugadores.h"
 #include "reglas.h"
+#include "rlutil.h"
 
 using namespace std;
 
@@ -80,14 +81,18 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
 
         case 5:
             system("cls");
+            rlutil::setColor(rlutil::GREEN);
             reglas();
             system("pause");
+            rlutil::setColor(rlutil::LIGHTMAGENTA);
             break;
 
         default:
             system("cls");
+            rlutil::setColor(rlutil::RED);
             cout << "Opción incorrecta!!" << endl;
             system("pause");
+            rlutil::setColor(rlutil::LIGHTMAGENTA);
             break;
         }
 

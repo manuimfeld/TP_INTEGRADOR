@@ -84,7 +84,7 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
             rlutil::setColor(rlutil::GREEN);
             reglas();
             system("pause");
-            rlutil::setColor(rlutil::LIGHTMAGENTA);
+            rlutil::setColor(rlutil::MAGENTA);
             break;
 
         default:
@@ -92,7 +92,7 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
             rlutil::setColor(rlutil::RED);
             cout << "Opción incorrecta!!" << endl;
             system("pause");
-            rlutil::setColor(rlutil::LIGHTMAGENTA);
+            rlutil::setColor(rlutil::MAGENTA);
             break;
         }
 

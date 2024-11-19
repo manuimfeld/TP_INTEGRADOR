@@ -1,0 +1,167 @@
+# depslib dependency file v1.0
+1732018779 source:c:\users\usuario\desktop\creditos.cpp
+	<iostream>
+	"creditos.h"
+
+1729803134 c:\users\usuario\desktop\creditos.h
+
+1732018779 source:c:\users\usuario\desktop\dados.cpp
+	<iostream>
+	"dados.h"
+	"rlutil.h"
+	"dibujos.h"
+
+1730119894 c:\users\usuario\desktop\dados.h
+
+1731595564 c:\users\usuario\desktop\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1732018779 c:\users\usuario\desktop\dibujos.h
+
+1732018779 source:c:\users\usuario\desktop\dibujos.cpp
+	<iostream>
+	"dibujos.h"
+	"rlutil.h"
+
+1730119894 source:c:\users\usuario\desktop\estadisticas.cpp
+	<iostream>
+
+1731595564 source:c:\users\usuario\desktop\jugador.cpp
+	<iostream>
+	<string>
+
+1732018779 source:c:\users\usuario\desktop\main.cpp
+	<iostream>
+	<ctime>
+	"menu.h"
+	<windows.h>
+	"creditos.h"
+	"modoUnJugador.h"
+	"modoDosJugadores.h"
+	"rlutil.h"
+
+1730119894 c:\users\usuario\desktop\menu.h
+
+1732018779 c:\users\usuario\desktop\modounjugador.h
+	<string>
+
+1732018779 c:\users\usuario\desktop\mododosjugadores.h
+
+1732018779 source:c:\users\usuario\desktop\menu.cpp
+	<iostream>
+	"menu.h"
+	"modoUnJugador.h"
+	"dados.h"
+	"creditos.h"
+	"jugador.h"
+	"estadisticas.h"
+	"modoDosJugadores.h"
+	"reglas.h"
+	"rlutil.h"
+
+1731595564 c:\users\usuario\desktop\jugador.h
+
+1730119894 c:\users\usuario\desktop\estadisticas.h
+	<string>
+
+1731595564 c:\users\usuario\desktop\reglas.h
+
+1732018779 source:c:\users\usuario\desktop\mododosjugadores.cpp
+	"dados.h"
+	"tirada.h"
+	"puntaje.h"
+	"ronda.h"
+	"estadisticas.h"
+	"menu.h"
+	"modoUnJugador.h"
+	<iostream>
+	"turnos.h"
+	"modoDosJugadores.h"
+
+1732018779 c:\users\usuario\desktop\tirada.h
+	<string>
+
+1731595564 c:\users\usuario\desktop\puntaje.h
+
+1731595564 c:\users\usuario\desktop\ronda.h
+
+1732018779 c:\users\usuario\desktop\turnos.h
+	<string>
+
+1732018779 source:c:\users\usuario\desktop\modounjugador.cpp
+	<iostream>
+	<limits>
+	"dados.h"
+	"ronda.h"
+	"tirada.h"
+	"puntaje.h"
+	"estadisticas.h"
+	"turnos.h"
+	<string>
+
+1731595564 source:c:\users\usuario\desktop\puntaje.cpp
+	<iostream>
+	"puntaje.h"
+
+1732018779 source:c:\users\usuario\desktop\reglas.cpp
+	<iostream>
+	"reglas.h"
+
+1731595564 source:c:\users\usuario\desktop\ronda.cpp
+	<iostream>
+	<limits>
+	"dados.h"
+
+1731595564 source:c:\users\usuario\desktop\tapio-rlutil-821fdca\example.c
+	"rlutil.h"
+	<stdlib.h>
+	<stdio.h>
+	"math.h"
+
+1731595564 c:\users\usuario\desktop\tapio-rlutil-821fdca\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1731595564 source:c:\users\usuario\desktop\tapio-rlutil-821fdca\test.cpp
+	"rlutil.h"
+	<algorithm>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+
+1732018779 source:c:\users\usuario\desktop\tirada.cpp
+	<iostream>
+	<limits>
+	"dados.h"
+	"puntaje.h"
+	"rlutil.h"
+	"dibujos.h"
+	<string>
+
+1732018779 source:c:\users\usuario\desktop\turnos.cpp
+	<iostream>
+	"tirada.h"
+	"dados.h"
+	"puntaje.h"
+

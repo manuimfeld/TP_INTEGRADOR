@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="greed" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/greed" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/greed" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-static -static-libgcc -static-libstdc++" />
+		</Compiler>
+		<Unit filename="../creditos.cpp" />
+		<Unit filename="../creditos.h" />
+		<Unit filename="../dados.cpp" />
+		<Unit filename="../dados.h" />
+		<Unit filename="../dibujos.cpp" />
+		<Unit filename="../dibujos.h" />
+		<Unit filename="../estadisticas.cpp" />
+		<Unit filename="../estadisticas.h" />
+		<Unit filename="../jugador.cpp" />
+		<Unit filename="../jugador.h" />
+		<Unit filename="../main.cpp" />
+		<Unit filename="../menu.cpp" />
+		<Unit filename="../menu.h" />
+		<Unit filename="../modoDosJugadores.h" />
+		<Unit filename="../modoDosjugadores.cpp" />
+		<Unit filename="../modoUnJugador.cpp" />
+		<Unit filename="../modoUnJugador.h" />
+		<Unit filename="../puntaje.cpp" />
+		<Unit filename="../puntaje.h" />
+		<Unit filename="../reglas.cpp" />
+		<Unit filename="../reglas.h" />
+		<Unit filename="../rlutil.h" />
+		<Unit filename="../ronda.cpp" />
+		<Unit filename="../ronda.h" />
+		<Unit filename="../tirada.cpp" />
+		<Unit filename="../tirada.h" />
+		<Unit filename="../turnos.cpp" />
+		<Unit filename="../turnos.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

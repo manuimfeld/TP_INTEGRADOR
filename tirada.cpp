@@ -25,8 +25,8 @@ int ejecutarTirada(int rondaActual, string nombreJugador, int dados[5], int dado
     cout << "------------" << endl;
     cout << "Ronda: " << rondaActual << endl;
     cout << "Bloqueadores: ";
-    rlutil::setColor(rlutil::RED); 
-    cout << bloqueador1 << " " << bloqueador2 << endl;
+    rlutil::setColor(rlutil::RED);
+    mostrarBloqueadores(bloqueador1, bloqueador2);
     rlutil::setColor(rlutil::MAGENTA);
     // Mostrar los resultados de la tirada
     cout << endl;

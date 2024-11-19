@@ -46,7 +46,7 @@ void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqu
 
 void mostrarBloqueadores(int bloqueador1, int bloqueador2)
 {
-    cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
+    cout << bloqueador1 << " y " << bloqueador2 << endl;
 };
 
 int calcularDadosDisponibles(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)

@@ -106,5 +106,5 @@ void dibujarDados(int numero, int posx, int posy, bool fueBloqueado)
 
     // Reseteamos los colores después de dibujar el dado
     rlutil::setBackgroundColor(rlutil::BLACK);
-    rlutil::setColor(rlutil::MAGENTA);
+    rlutil::setColor(rlutil::LIGHTMAGENTA);
 }

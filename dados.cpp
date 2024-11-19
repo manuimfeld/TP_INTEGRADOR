@@ -20,6 +20,7 @@ void tiradaDeDados(int vDados[], int dadosDisponibles)
 
 void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqueador2)
 {
+    bool fueBloqueado = false;
     int posx = 1, posy = 10; // Posición inicial de los dados (X e Y)
     for (int i = 0; i < dadosDisponibles; i++)
     {
@@ -28,13 +29,13 @@ void mostrarDados(int vDados[], int dadosDisponibles, int bloqueador1, int bloqu
 
         if (vDados[i] == bloqueador1 || vDados[i] == bloqueador2)
         {
-            rlutil::setColor(rlutil::RED); // Si el dado es igual a algún bloqueador, lo mostramos en rojo
-            dibujarDados(vDados[i], dadoPosX, dadoPosY);
+            fueBloqueado = true;
+            dibujarDados(vDados[i], dadoPosX, dadoPosY, fueBloqueado);
         }
         else
         {
-            rlutil::setColor(rlutil::WHITE); // Mostramos los otros dados de color blanco
-            dibujarDados(vDados[i], dadoPosX, dadoPosY);
+            fueBloqueado = false;
+            dibujarDados(vDados[i], dadoPosX, dadoPosY, fueBloqueado);
         }
         rlutil::resetColor();
         // Reseteamos el color después de cada dado

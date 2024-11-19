@@ -8,7 +8,11 @@ using namespace std;
 
 void dibujarCuadrado(int posx, int posy)
 {
+
     rlutil::setColor(rlutil::WHITE);
+
+    rlutil::setColor(rlutil::WHITE);
+
     for (int x = posx; x < posx + 9; x++) // Ancho de 9
     {
         for (int y = posy; y < posy + 5; y++) // Altura de 5
@@ -20,13 +24,21 @@ void dibujarCuadrado(int posx, int posy)
     rlutil::resetColor();
 }
 
-void dibujarDados(int numero, int posx, int posy)
+void dibujarDados(int numero, int posx, int posy, bool fueBloqueado)
 {
     dibujarCuadrado(posx, posy); // Dibuja el cuadrado del dado
 
     // Seteamos el color de los puntos del dado
-    rlutil::setColor(rlutil::BLACK);
-    rlutil::setBackgroundColor(rlutil::WHITE);
+    if (fueBloqueado)
+    {
+        rlutil::setColor(rlutil::RED);
+        rlutil::setBackgroundColor(rlutil::WHITE);
+    }
+    else
+    {
+        rlutil::setColor(rlutil::BLACK);
+        rlutil::setBackgroundColor(rlutil::WHITE);
+    }
 
     // Dibujamos los puntitos en los dados
     switch (numero)

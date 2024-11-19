@@ -6,7 +6,6 @@
 #include "menu.h"
 #include "modoUnJugador.h"
 #include <iostream>
-#include "mensajes.h"
 #include "turnos.h"
 #include "modoDosJugadores.h"
 
@@ -26,14 +25,6 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
         int bloqueador1, bloqueador2;
         iniciarBloqueadores(bloqueador1, bloqueador2);
 
-        cout << "Turno de: " << nombreJugador1 << endl;
-        cout << "------------" << endl;
-        cout << "Ronda: " << rondaActual << endl;
-        cout << "Puntos de " << nombreJugador1 << " : " << puntajeTotal1 << endl;
-        cout << "Puntos de " << nombreJugador2 << " : " << puntajeTotal2 << endl
-             << endl;
-        cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
-
         int puntajeRonda = ejecutarTurnoJugador(rondaActual, nombreJugador1, dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTotal1);
 
         if (puntajeTotal1 > actualMejorPuntuacion)
@@ -45,14 +36,6 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
 
         dadosDisponibles = 5;
         iniciarBloqueadores(bloqueador1, bloqueador2);
-
-        cout << "Turno de: " << nombreJugador2 << endl;
-        cout << "------------" << endl;
-        cout << "Ronda: " << rondaActual << endl;
-        cout << "Puntos de " << nombreJugador1 << " : " << puntajeTotal1 << endl;
-        cout << "Puntos de " << nombreJugador2 << " : " << puntajeTotal2 << endl
-             << endl;
-        cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
 
         puntajeRonda = ejecutarTurnoJugador(rondaActual, nombreJugador2, dados, dadosDisponibles, bloqueador1, bloqueador2, puntajeTotal2);
 
@@ -69,9 +52,9 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
 
     cout << "Partida Finalizada" << endl
          << endl;
-    cout << "Puntaje total jugador 1: " << puntajeTotal1 << " puntos" << endl
+    cout << "Puntaje total de " << nombreJugador1 << puntajeTotal1 << " puntos" << endl
          << endl;
-    cout << "Puntaje total jugador 2: " << puntajeTotal2 << " puntos" << endl
+    cout << "Puntaje total de " << nombreJugador2 << puntajeTotal2 << " puntos" << endl
          << endl;
 
     if (puntajeTotal1 > puntajeTotal2)
@@ -86,6 +69,6 @@ void modoDosJugadores(string nombreJugador2, string nombreJugador1, string &actu
     }
     else
     {
-        cout << "Tenemos un empate, se tienen que agarrar a las piñas" << endl;
+        cout << "Tenemos un empate, jueguen de nuevo" << endl;
     }
 }

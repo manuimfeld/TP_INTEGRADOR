@@ -5,7 +5,7 @@ using namespace std;
 
 void mostrarCreditos()
 {
-    cout << "Creditos: Equipo 63" << endl;
+    cout << "Equipo 63" << endl;
     cout << "Integrantes:" << endl;
     cout << "Fiaschi Bernardo - Legajo 31892" << endl;
     cout << "Serafini Nicolas - Legajo 30610" << endl;

@@ -8,13 +8,6 @@
 
 using namespace std;
 
-void mostrarResultadosTirada(int dados[], int dadosDisponibles, int bloqueador1, int bloqueador2, int puntajeTirada)
-{
-    mostrarBloqueadores(bloqueador1, bloqueador2);
-    mostrarDados(dados, dadosDisponibles, bloqueador1, bloqueador2);
-    cout << "Puntaje de la tirada: " << puntajeTirada << endl;
-}
-
 int ejecutarTirada(int rondaActual, string nombreJugador, int dados[5], int dadosDisponibles, int bloqueador1, int bloqueador2, int tiradaActual, int &puntajeTurno)
 {
     system("cls");
@@ -35,6 +28,7 @@ int ejecutarTirada(int rondaActual, string nombreJugador, int dados[5], int dado
     cout << "Dados: ";
     mostrarDados(dados, dadosDisponibles, bloqueador1, bloqueador2);
     cout << endl
+         << endl
          << endl;
     cout << "Puntaje de la tirada: " << puntajeTirada << endl;
     cout << endl;

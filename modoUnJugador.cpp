@@ -4,7 +4,6 @@
 #include "ronda.h"
 #include "tirada.h"
 #include "puntaje.h"
-#include "mensajes.h"
 #include "estadisticas.h"
 #include "turnos.h"
 #include <string>
@@ -26,11 +25,6 @@ void jugarModoSolitario(string nombreJugador, string &actualMejorJugador, int &a
         rondaActual++;
         int bloqueador1, bloqueador2;
         iniciarBloqueadores(bloqueador1, bloqueador2); // Guardamos los bloqueadores de la ronda
-
-        // cout << "Turno de: " << nombreJugador << endl;
-        // cout << "------------" << endl;
-        // cout << "Ronda: " << rondaActual << endl;
-        // cout << "Bloqueadores: " << bloqueador1 << " " << bloqueador2 << endl;
 
         // Se inician las tiradas del jugador (ejecutarTurnoJugador)
         // IMPORTANTE: leer bien la función por dentro

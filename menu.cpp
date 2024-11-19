@@ -75,7 +75,7 @@ void menu(string &actualMejorJugador, int &actualMejorPuntuacion)
 
         case 4:
             system("cls");
-            cout << "Créditos" << endl;
+            cout << "Creditos" << endl;
             mostrarCreditos();
             break;
 
